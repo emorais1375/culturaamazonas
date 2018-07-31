@@ -1,0 +1,33 @@
+page-featured {
+    .bar-button ,
+    .toolbar-title {
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+    div {
+        padding-top: 0 !important;
+        position: relative;
+    }
+    h2 {
+        text-shadow: black 0.1em 0.1em 0.2em;
+        position: absolute;
+        font-size: 2.0rem;
+        color: white;
+        bottom: 5%;
+        left: 5%;
+    }
+    h6 {
+        text-shadow: black 0.1em 0.1em 0.2em;
+        position: absolute;
+        font-size: 1.5rem;
+        color: white;
+        bottom: 15%;
+        left: 5%;
+    }
+    img {
+        object-fit: cover;
+        //display: block;
+        height: 40vh;
+        width: 100%;
+    }
+}

@@ -1,18 +1,50 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-border>
+  <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)='openAgenda()'>
+          <ion-icon>AGENDA CULTURAL</ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
+<ion-content fullscreen>
+  <ion-slides pager #slides loop speed=400 autoplay=6500 
+      (ionSlideAutoplayStop)="onSlideStart()">
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+    <ion-slide *ngFor='let pauta of pautas' (click)='openDescricao(pauta)' [ngStyle]="{'background': 'url('+pauta.image+') center /cover'}">
+      <p>{{pauta.type}} • {{pauta.hour_start}} - {{pauta.hour_end}}</p>
+      <h2>{{pauta.name}}</h2>
+    </ion-slide>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+    <!-- <ion-slide (click)='openDescricao(1)' style="background: url(assets/img/ev02.jpg) no-repeat center /cover">
+      <p>13:00 - 14:00</p>
+      <h2>Debate</h2>
+    </ion-slide>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-slide (click)='openDescricao(2)' style="background: url(assets/img/ev03.jpg) no-repeat center /cover">
+      <p>13:00 - 14:00</p>
+      <h2>Debate</h2>
+    </ion-slide>
+
+    <ion-slide (click)='openDescricao(3)'style="background: url(assets/img/ev04.jpg) no-repeat center /cover">
+      <p>13:00 - 14:00</p>
+      <h2>Debate</h2>
+    </ion-slide> -->
+
+  </ion-slides>
+
+  <div class='Rectangle-3' onclick="window.open('http://www.cultura.am.gov.br', '_system', 'location=yes'); return false;" style="background: url(assets/img/t02.png) center /cover">
+  </div>
+
+  <div class='Sombra-Padro' (click)='openEspacos()'><h2>Espaços</h2></div>
+
+  <ion-fab right bottom>
+    <button ion-fab color='primary2' (click)='openDescubra()'>
+      <ion-icon name='md-eye'></ion-icon>
+    </button>
+  </ion-fab>
+
 </ion-content>

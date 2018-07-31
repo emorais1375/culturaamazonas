@@ -1,0 +1,41 @@
+<!--
+  Generated template for the PlaceDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalhes</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <div>
+      <img [src]="place.image">
+    </div>
+    <div padding>
+      <div text-center>
+        
+        <h4>{{place.name}}</h4>
+        <p align="justify">
+          {{place.description}}<br>
+          <br>
+          <strong>Segunda: </strong>{{place.dia.seg}}<br>
+          <strong>Terça: </strong>{{place.dia.ter}}<br>
+          <strong>Quarta: </strong>{{place.dia.qua}}<br>
+          <strong>Quinta: </strong>{{place.dia.qui}}<br>
+          <strong>Sexta: </strong>{{place.dia.sex}}<br>
+          <strong>Sábado: </strong>{{place.dia.sab}}<br>
+          <strong>Domingo: </strong>{{place.dia.dom}}<br>
+          <br>
+          <strong>Telefone: </strong>{{place.phone}}<br>
+          <strong>Endereço: </strong>{{place.location}}<br>
+        </p>
+      </div>
+    </div>
+</ion-content>
+

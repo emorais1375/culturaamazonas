@@ -1,23 +1,33 @@
-<ion-header>
-  <ion-navbar>
+<ion-header no-border>
+  <ion-navbar transparent>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Agenda</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+<ion-content fullscreen>
+  <ion-grid no-padding>
+    <!-- <ion-row>
+      <ion-col col-12>
+        <div class='data'><h2>Hoje</h2></div>
+        <div class='detalhe'>
+            <h6>13:00 - 14:00</h6><h2>Debate</h2>
+        </div>
+        <div style="background: url(assets/img/ev05.jpg) no-repeat center /cover; height: 39.8vh;"></div>
+      </ion-col>
+    </ion-row> -->
+    <ion-row>
+      <ion-col col-12 *ngFor="let pauta of pautas">
+        <div class='detalhe2' (click)='openPauta(pauta)'>
+          <img [src]='pauta.image'/>
+          <h6>{{pauta.type}} • {{pauta.hour_start}} - {{pauta.hour_end}}</h6>
+          <h2>{{pauta.name}}</h2>
+        </div>
+        <!-- <div style="height: 20.2vh" [ngStyle]="{'background':'url('+pauta.image+') no-repeat center /cover'}" (click)='openPauta(pauta)'></div> -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

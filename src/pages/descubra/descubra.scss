@@ -1,0 +1,71 @@
+page-descubra {
+	ion-icon {
+		color: white;
+		text-shadow: black 0.1em 0.1em 0.2em;
+	}
+	.toolbar {
+		position: fixed;
+	}
+	.toolbar-background {
+		background: transparent;
+	}
+	.bar-button,
+	.toolbar-title {
+		color: white;
+		text-shadow: black 0.1em 0.1em 0.2em;
+	}
+	.list {
+		margin: 0;
+	}
+	.item {
+		position: relative;
+		padding: 0;
+	}
+	.label {
+		margin: 0;
+	}
+	.item.item-block .item-inner {
+		padding-right: 0px;
+	}
+	.item h2 {
+		text-shadow: black 0.1em 0.1em 0.2em;
+        position: absolute;
+        font-size: 2.0rem;
+        color: white;
+        bottom: 5%;
+        left: 5%;
+	}
+	.item h6 {
+		text-shadow: black 0.1em 0.1em 0.2em;
+        position: absolute;
+        font-size: 1.5rem;
+        color: white;
+        bottom: 15%;
+        left: 5%;
+	}
+	img {		
+		/*border: 1px solid #f00;*/
+		object-fit: cover;
+		display: block;
+		height: 40vh;
+		width: 100%;
+	}
+	button {
+    position: absolute;
+    bottom: 13.1%;
+    font-size: 2.4rem;
+    background: transparent;
+	}
+	.bt2 {
+    right: 6.8%;
+	}
+	.bt1 {
+    right: 16.8%;
+	}
+	ion-icon.icon.icon.ion-md-checkmark.item-icon {
+		color: green;
+	}
+	ion-icon.icon.icon.ion-md-close.item-icon {
+		color: red;
+	}
+}
